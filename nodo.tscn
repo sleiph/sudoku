@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://db8lc7ksnviwf"]
+
+[ext_resource type="Script" path="res://scripts/nodo.gd" id="1_eyrne"]
+[ext_resource type="Texture2D" uid="uid://bq7xhv5vcecw8" path="res://sprites/1.png" id="1_h0p15"]
+[ext_resource type="PackedScene" uid="uid://by7vr3mu4qaip" path="res://palpites.tscn" id="2_01l1s"]
+[ext_resource type="Script" path="res://scripts/spriteNodo.gd" id="3_lir3l"]
+[ext_resource type="Texture2D" uid="uid://c2dcmrkmcwlar" path="res://sprites/frame.png" id="13_4q34h"]
+[ext_resource type="Texture2D" uid="uid://cjhit260vi2ib" path="res://sprites/fundonodoa.png" id="15_0i1ls"]
+[ext_resource type="Texture2D" uid="uid://du2tvhfwxk5op" path="res://sprites/fundonodod.png" id="15_fp06x"]
+[ext_resource type="Texture2D" uid="uid://7kh3hru7y11g" path="res://sprites/fundonodob.png" id="16_y7713"]
+[ext_resource type="Texture2D" uid="uid://bx2n6cuqhxc5o" path="res://sprites/fundonodoc.png" id="17_mao23"]
+
+[node name="nodo" type="Node2D"]
+script = ExtResource("1_eyrne")
+
+[node name="notas" parent="." instance=ExtResource("2_01l1s")]
+modulate = Color(1, 1, 1, 1)
+
+[node name="inicial" type="Sprite2D" parent="."]
+self_modulate = Color(0.196078, 0.235294, 0.27451, 1)
+z_index = 2
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_h0p15")
+centered = false
+script = ExtResource("3_lir3l")
+
+[node name="variavel" type="Sprite2D" parent="."]
+self_modulate = Color(0.25098, 0.25098, 0.360784, 1)
+z_index = 1
+texture_filter = 1
+scale = Vector2(3, 3)
+centered = false
+script = ExtResource("3_lir3l")
+
+[node name="frame" type="Sprite2D" parent="."]
+self_modulate = Color(0.941176, 0.784314, 0.705882, 1)
+z_index = -1
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("13_4q34h")
+centered = false
+
+[node name="estado" type="TextureButton" parent="."]
+z_index = -2
+offset_right = 24.0
+offset_bottom = 24.0
+scale = Vector2(3, 3)
+button_mask = 3
+texture_normal = ExtResource("16_y7713")
+texture_hover = ExtResource("15_0i1ls")
+texture_disabled = ExtResource("15_fp06x")
+texture_focused = ExtResource("17_mao23")
+
+[connection signal="focus_entered" from="estado" to="." method="_on_estado_focus_entered"]
+[connection signal="focus_exited" from="estado" to="." method="_on_estado_focus_exited"]
+[connection signal="pressed" from="estado" to="." method="_on_estado_pressed"]
+[connection signal="toggled" from="estado" to="." method="_on_estado_toggled"]

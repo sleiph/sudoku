@@ -1,0 +1,40 @@
+# Fazer
+
+- fazer as notas foncionarem
+
+- cores diferentes pra cada numero
+
+- selecionar mais de um nodo
+
+- checar se preencheu certo
+- vidas
+- tela de vitoria
+- tela de game-over
+
+- mudar a cor das celulas q já vem preenchidas pra um azul?
+
+- selecionar nodos com o mesmo valor quando clica em um
+
+
+
+# Copia e cola
+
+## Tamanhos
+
+696x792
+87x99
+
+
+## Cores
+
+240x240x230 	fundo nodo
+240x200x180 	frame
+200z220z252 	fundo jogo
+155x175x185
+50x60x70	numeros
+
+
+## Refs
+
+https://www.geeksforgeeks.org/program-sudoku-generator/
+
