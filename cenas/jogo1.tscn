@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ctfy4f1nyitia"]
 
-[ext_resource type="Texture2D" uid="uid://ce24svmxc4gja" path="res://sprites/fundo.png" id="1_oscnc"]
+[ext_resource type="Texture2D" uid="uid://hi8e1g7lbs0s" path="res://sprites/fundo.png" id="1_oscnc"]
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="2_i5dbl"]
 [ext_resource type="PackedScene" uid="uid://db8lc7ksnviwf" path="res://cenas/nodo.tscn" id="3_oy7u4"]
-[ext_resource type="Texture2D" uid="uid://bon4nktmhq1a1" path="res://sprites/separadorase-export.png" id="4_udvno"]
+[ext_resource type="Texture2D" uid="uid://cqe7je74ryiun" path="res://sprites/separador.png" id="4_udvno"]
 
 [node name="Node2D" type="Node2D"]
 

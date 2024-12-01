@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://db8lc7ksnviwf"]
 
 [ext_resource type="Script" path="res://scripts/nodo.gd" id="1_eyrne"]
-[ext_resource type="Texture2D" uid="uid://bq7xhv5vcecw8" path="res://sprites/1.png" id="1_h0p15"]
+[ext_resource type="Texture2D" uid="uid://dmvi8xxty1sc1" path="res://sprites/1.png" id="1_h0p15"]
 [ext_resource type="PackedScene" uid="uid://by7vr3mu4qaip" path="res://cenas/palpites.tscn" id="2_01l1s"]
 [ext_resource type="Script" path="res://scripts/spriteNodo.gd" id="3_lir3l"]
-[ext_resource type="Texture2D" uid="uid://c2dcmrkmcwlar" path="res://sprites/frame.png" id="13_4q34h"]
-[ext_resource type="Texture2D" uid="uid://cjhit260vi2ib" path="res://sprites/fundonodoa.png" id="15_0i1ls"]
-[ext_resource type="Texture2D" uid="uid://du2tvhfwxk5op" path="res://sprites/fundonodod.png" id="15_fp06x"]
-[ext_resource type="Texture2D" uid="uid://7kh3hru7y11g" path="res://sprites/fundonodob.png" id="16_y7713"]
-[ext_resource type="Texture2D" uid="uid://bx2n6cuqhxc5o" path="res://sprites/fundonodoc.png" id="17_mao23"]
+[ext_resource type="Texture2D" uid="uid://ct78c78veae5q" path="res://sprites/frame.png" id="13_4q34h"]
+[ext_resource type="Texture2D" uid="uid://lutw8upbnr5n" path="res://sprites/fundonodoa.png" id="15_0i1ls"]
+[ext_resource type="Texture2D" uid="uid://cqeops4x2spxm" path="res://sprites/fundonodod.png" id="15_fp06x"]
+[ext_resource type="Texture2D" uid="uid://ds8rsn6ores8j" path="res://sprites/fundonodob.png" id="16_y7713"]
+[ext_resource type="Texture2D" uid="uid://bfb7gft0po2w8" path="res://sprites/fundonodoc.png" id="17_mao23"]
 
 [node name="nodo" type="Node2D"]
 script = ExtResource("1_eyrne")
