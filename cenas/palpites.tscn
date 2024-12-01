@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://by7vr3mu4qaip"]
 
-[ext_resource type="Texture2D" uid="uid://bq7xhv5vcecw8" path="res://sprites/1.png" id="1_qts0t"]
-[ext_resource type="Texture2D" uid="uid://dr0xiuskmcmrx" path="res://sprites/2.png" id="2_pln25"]
-[ext_resource type="Texture2D" uid="uid://cn2ndchkpcl3a" path="res://sprites/3.png" id="3_ktw1i"]
-[ext_resource type="Texture2D" uid="uid://cojp1oskam0eb" path="res://sprites/4.png" id="4_sgqtx"]
-[ext_resource type="Texture2D" uid="uid://baqo7pg13dhf4" path="res://sprites/5.png" id="5_sj5e5"]
-[ext_resource type="Texture2D" uid="uid://bkm1hs82m3ycq" path="res://sprites/6.png" id="6_3ta5r"]
-[ext_resource type="Texture2D" uid="uid://ddnv7abpnf5um" path="res://sprites/7.png" id="7_vbnhg"]
-[ext_resource type="Texture2D" uid="uid://b12inpkjnfruk" path="res://sprites/8.png" id="8_1s4gx"]
-[ext_resource type="Texture2D" uid="uid://bcbxyunvbdxxe" path="res://sprites/9.png" id="9_hi17o"]
+[ext_resource type="Texture2D" uid="uid://bq7xhv5vcecw8" path="res://sprites/1.png" id="1_kml5h"]
+[ext_resource type="Texture2D" uid="uid://dr0xiuskmcmrx" path="res://sprites/2.png" id="2_ywt50"]
+[ext_resource type="Texture2D" uid="uid://cn2ndchkpcl3a" path="res://sprites/3.png" id="3_qxmxn"]
+[ext_resource type="Texture2D" uid="uid://cojp1oskam0eb" path="res://sprites/4.png" id="4_8otva"]
+[ext_resource type="Texture2D" uid="uid://baqo7pg13dhf4" path="res://sprites/5.png" id="5_hcmur"]
+[ext_resource type="Texture2D" uid="uid://bkm1hs82m3ycq" path="res://sprites/6.png" id="6_tlqah"]
+[ext_resource type="Texture2D" uid="uid://ddnv7abpnf5um" path="res://sprites/7.png" id="7_aj1cg"]
+[ext_resource type="Texture2D" uid="uid://b12inpkjnfruk" path="res://sprites/8.png" id="8_q63yt"]
+[ext_resource type="Texture2D" uid="uid://bcbxyunvbdxxe" path="res://sprites/9.png" id="9_v8leq"]
 
 [node name="palpites" type="Node2D"]
 modulate = Color(0.313726, 0.235294, 0.27451, 1)
@@ -16,61 +16,61 @@ modulate = Color(0.313726, 0.235294, 0.27451, 1)
 [node name="1" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-texture = ExtResource("1_qts0t")
+texture = ExtResource("1_kml5h")
 centered = false
 
 [node name="2" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(24, 0)
-texture = ExtResource("2_pln25")
+texture = ExtResource("2_ywt50")
 centered = false
 
 [node name="3" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(48, 0)
-texture = ExtResource("3_ktw1i")
+texture = ExtResource("3_qxmxn")
 centered = false
 
 [node name="4" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(0, 24)
-texture = ExtResource("4_sgqtx")
+texture = ExtResource("4_8otva")
 centered = false
 
 [node name="5" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(24, 24)
-texture = ExtResource("5_sj5e5")
+texture = ExtResource("5_hcmur")
 centered = false
 
 [node name="6" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(48, 24)
-texture = ExtResource("6_3ta5r")
+texture = ExtResource("6_tlqah")
 centered = false
 
 [node name="7" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(0, 48)
-texture = ExtResource("7_vbnhg")
+texture = ExtResource("7_aj1cg")
 centered = false
 
 [node name="8" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(24, 48)
-texture = ExtResource("8_1s4gx")
+texture = ExtResource("8_q63yt")
 centered = false
 
 [node name="9" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(48, 48)
-texture = ExtResource("9_hi17o")
+texture = ExtResource("9_v8leq")
 centered = false
