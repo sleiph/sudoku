@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctfy4f1nyitia"]
+[gd_scene load_steps=7 format=3 uid="uid://ctfy4f1nyitia"]
 
 [ext_resource type="Texture2D" uid="uid://hi8e1g7lbs0s" path="res://sprites/fundo.png" id="1_oscnc"]
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="2_i5dbl"]
 [ext_resource type="PackedScene" uid="uid://db8lc7ksnviwf" path="res://cenas/nodo.tscn" id="3_oy7u4"]
+[ext_resource type="Script" path="res://scripts/spriteNodo.gd" id="4_ceqtc"]
 [ext_resource type="Texture2D" uid="uid://cqe7je74ryiun" path="res://sprites/separador.png" id="4_udvno"]
+[ext_resource type="Texture2D" uid="uid://b7jnuyiibfxh" path="res://sprites/vida.png" id="5_mfmiu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,6 +19,33 @@ centered = false
 [node name="jogo" type="Node2D" parent="."]
 position = Vector2(24, 96)
 script = ExtResource("2_i5dbl")
+
+[node name="vidas" type="Node2D" parent="jogo"]
+position = Vector2(0, -56)
+
+[node name="3" type="Sprite2D" parent="jogo/vidas"]
+texture_filter = 1
+position = Vector2(600, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("5_mfmiu")
+centered = false
+script = ExtResource("4_ceqtc")
+
+[node name="2" type="Sprite2D" parent="jogo/vidas"]
+texture_filter = 1
+position = Vector2(540, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("5_mfmiu")
+centered = false
+script = ExtResource("4_ceqtc")
+
+[node name="1" type="Sprite2D" parent="jogo/vidas"]
+texture_filter = 1
+position = Vector2(480, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("5_mfmiu")
+centered = false
+script = ExtResource("4_ceqtc")
 
 [node name="Linha1" type="Node2D" parent="jogo"]
 

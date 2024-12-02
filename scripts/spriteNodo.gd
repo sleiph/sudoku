@@ -11,7 +11,10 @@ func preenche(n: int, v: int) -> void:
 	var caminho_imagem: String = tex_path % n
 	var tex: Resource = load(caminho_imagem)
 	self.texture = tex
-	self.visible = v
+	set_visivel(v)
 
 func limpa() -> void:
 	self.texture = null;
+
+func set_visivel(valor: bool) -> void:
+	self.visible = valor

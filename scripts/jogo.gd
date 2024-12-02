@@ -3,26 +3,36 @@ extends Node
 
 @onready var nodos_path: String = "Linha%s/Node2D%s%s"
 
-var linhas: Array[Array] = [
-	[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
-	[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
-	[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]
-]
-var visibilidade: Array[Array] = [
-	[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],
-	[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],
-	[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1]
-]
+@onready var vidas: Array[Node] = [get_node("vidas/1"), get_node("vidas/2"), get_node("vidas/3")]
+var linhas: Array[Array]
+var visibilidade: Array[Array]
 var n: int = 0
 var srn: int = 0
+var n_vidas = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	inicia_jogo(9, 54)
+	comeca_jogo()
+
+func comeca_jogo() -> void:
+	inicia_arrays()
+	carrega_vidas()
+	inicia_tabuleiro(9, 54)
 	popula_nodos()
-	
-func inicia_jogo(tamanho: int, k: int) -> void:
+
+func inicia_arrays() -> void:
+	linhas = [
+		[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],
+		[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]
+	]
+	visibilidade = [
+		[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],
+		[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],
+		[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1]
+	]
+
+func inicia_tabuleiro(tamanho: int, k: int) -> void:
 	n = tamanho
 	srn = sqrt(tamanho)
 	preenche_valores(k)
@@ -122,7 +132,7 @@ func popula_nodos() -> void:
 			var nodo: Node = get_node(caminho_nodo)
 			var vizinhos: Array[NodePath] = get_vizinhos(i, j)
 			var sequencia: Array[NodePath] = get_sequencia(i, j)
-			nodo.carregar_nodo(linhas[i][j], visibilidade[i][j], vizinhos, sequencia)
+			nodo.carregar_nodo(linhas[i][j], visibilidade[i][j], vizinhos, sequencia, self)
 
 func get_vizinhos(i: int, j: int) -> Array[NodePath]:
 	var ver: int = i+1
@@ -166,3 +176,19 @@ func get_sequencia(i: int, j: int) -> Array[NodePath]:
 	var prx_node: NodePath = get_node(caminho_prx).get_estado()
 	
 	return [ant_node, prx_node]
+
+func carrega_vidas() -> void:
+	n_vidas = 3
+	for vida in vidas:
+		vida.set_visivel(true)
+
+func dano() -> void:
+	if n_vidas > 1:
+		var vida: Node = vidas[n_vidas-1]
+		vida.set_visivel(false)
+		n_vidas = n_vidas-1
+	else:
+		game_over()
+
+func game_over() -> void:
+	comeca_jogo()

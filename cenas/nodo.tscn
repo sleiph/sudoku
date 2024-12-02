@@ -54,5 +54,3 @@ texture_focused = ExtResource("17_mao23")
 
 [connection signal="focus_entered" from="estado" to="." method="_on_estado_focus_entered"]
 [connection signal="focus_exited" from="estado" to="." method="_on_estado_focus_exited"]
-[connection signal="pressed" from="estado" to="." method="_on_estado_pressed"]
-[connection signal="toggled" from="estado" to="." method="_on_estado_toggled"]
