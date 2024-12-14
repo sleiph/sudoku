@@ -1,0 +1,194 @@
+[gd_scene load_steps=18 format=3 uid="uid://ctngljvj7uu8l"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_nho4d"]
+[ext_resource type="Texture2D" uid="uid://cmjymnrwgoiss" path="res://sprites/o.png" id="2_bnjfe"]
+[ext_resource type="Texture2D" uid="uid://ip7xwmpheocb" path="res://sprites/n.png" id="3_catpr"]
+[ext_resource type="Texture2D" uid="uid://cvujq42y32ke2" path="res://sprites/t.png" id="4_35ox8"]
+[ext_resource type="Texture2D" uid="uid://byqqkeb7gn3ua" path="res://sprites/q.png" id="5_c3jy6"]
+[ext_resource type="Texture2D" uid="uid://bkd8meim1xkcs" path="res://sprites/s.png" id="6_676n4"]
+[ext_resource type="Texture2D" uid="uid://bqmvv8ae2xqcb" path="res://sprites/u.png" id="7_yfl0a"]
+[ext_resource type="Texture2D" uid="uid://cqe7je74ryiun" path="res://sprites/separador.png" id="8_feblo"]
+[ext_resource type="FontFile" uid="uid://bciglvsydgew6" path="res://fontes/VT323-Regular.ttf" id="9_q4rgk"]
+[ext_resource type="Texture2D" uid="uid://247kdifhsjv3" path="res://sprites/botao2.png" id="10_qbsmg"]
+[ext_resource type="Texture2D" uid="uid://bw6q4jaumi0g0" path="res://sprites/botao3.png" id="11_pcdid"]
+[ext_resource type="Texture2D" uid="uid://cxp0bcdg321e" path="res://sprites/botao8.png" id="12_io86p"]
+[ext_resource type="Texture2D" uid="uid://cxmvccqaml2hq" path="res://sprites/botao6.png" id="13_gaafs"]
+[ext_resource type="Texture2D" uid="uid://dxgeesik1xsos" path="res://sprites/botao1.png" id="14_5aar0"]
+[ext_resource type="Texture2D" uid="uid://gvdtbhl3n8mc" path="res://sprites/botao4.png" id="15_vah7h"]
+[ext_resource type="Texture2D" uid="uid://cdclidew578q0" path="res://sprites/botao7.png" id="16_pthk8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rgbte"]
+font = ExtResource("9_q4rgk")
+font_size = 36
+
+[node name="menu" type="Node2D"]
+position = Vector2(24, 72)
+script = ExtResource("1_nho4d")
+
+[node name="titulo" type="Node2D" parent="."]
+modulate = Color(0.486275, 0.486275, 0.486275, 1)
+position = Vector2(108, 0)
+
+[node name="o" type="Sprite2D" parent="titulo"]
+self_modulate = Color(1, 0.486275, 1, 1)
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("2_bnjfe")
+centered = false
+
+[node name="n" type="Sprite2D" parent="titulo"]
+self_modulate = Color(1, 1, 0.486275, 1)
+texture_filter = 1
+position = Vector2(144, 0)
+scale = Vector2(6, 6)
+texture = ExtResource("3_catpr")
+centered = false
+
+[node name="t" type="Sprite2D" parent="titulo"]
+self_modulate = Color(0.486275, 1, 1, 1)
+texture_filter = 1
+position = Vector2(288, 0)
+scale = Vector2(6, 6)
+texture = ExtResource("4_35ox8")
+centered = false
+
+[node name="q" type="Sprite2D" parent="titulo"]
+self_modulate = Color(0.486275, 1, 0.486275, 1)
+texture_filter = 1
+position = Vector2(0, 144)
+scale = Vector2(6, 6)
+texture = ExtResource("5_c3jy6")
+centered = false
+
+[node name="s" type="Sprite2D" parent="titulo"]
+self_modulate = Color(0.486275, 0.486275, 1, 1)
+texture_filter = 1
+position = Vector2(144, 144)
+scale = Vector2(6, 6)
+texture = ExtResource("6_676n4")
+centered = false
+
+[node name="u" type="Sprite2D" parent="titulo"]
+self_modulate = Color(1, 0.486275, 0.486275, 1)
+texture_filter = 1
+position = Vector2(288, 144)
+scale = Vector2(6, 6)
+texture = ExtResource("7_yfl0a")
+centered = false
+
+[node name="Node2D" type="Node2D" parent="titulo"]
+
+[node name="sep1" type="Sprite2D" parent="titulo/Node2D"]
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep2" type="Sprite2D" parent="titulo/Node2D"]
+position = Vector2(0, 144)
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep3" type="Sprite2D" parent="titulo/Node2D"]
+position = Vector2(0, 288)
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep8" type="Sprite2D" parent="titulo/Node2D"]
+position = Vector2(0, 432)
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep4" type="Sprite2D" parent="titulo/Node2D"]
+rotation = 1.5708
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep5" type="Sprite2D" parent="titulo/Node2D"]
+position = Vector2(144, 0)
+rotation = 1.5708
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep6" type="Sprite2D" parent="titulo/Node2D"]
+position = Vector2(288, 0)
+rotation = 1.5708
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="sep7" type="Sprite2D" parent="titulo/Node2D"]
+position = Vector2(432, 0)
+rotation = 1.5708
+scale = Vector2(1.333, 2)
+texture = ExtResource("8_feblo")
+centered = false
+
+[node name="Label" type="Label" parent="titulo"]
+editor_description = "descricao do jogo"
+self_modulate = Color(0.486275, 0.486275, 0.486275, 1)
+custom_minimum_size = Vector2(432, 0)
+offset_top = 338.6
+offset_right = 432.0
+offset_bottom = 481.6
+text = "Os Números Tem Que Ser Únicos"
+label_settings = SubResource("LabelSettings_rgbte")
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+text_direction = 1
+language = "pt_BR"
+
+[node name="botoes" type="Node2D" parent="."]
+position = Vector2(324, 528)
+
+[node name="novo" type="TextureButton" parent="botoes"]
+self_modulate = Color(1, 0, 0.282353, 1)
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_bottom = 24.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+tooltip_text = "Novo Jogo"
+focus_neighbor_left = NodePath("../sair")
+focus_neighbor_top = NodePath("../sair")
+focus_neighbor_right = NodePath("../sair")
+focus_neighbor_bottom = NodePath("../sair")
+focus_next = NodePath("../sair")
+focus_previous = NodePath("../sair")
+texture_normal = ExtResource("10_qbsmg")
+texture_pressed = ExtResource("11_pcdid")
+texture_hover = ExtResource("12_io86p")
+texture_disabled = ExtResource("13_gaafs")
+
+[node name="sair" type="TextureButton" parent="botoes"]
+self_modulate = Color(1, 0, 0.282353, 1)
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = 72.0
+offset_bottom = 96.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+tooltip_text = "Sair do jogo"
+focus_neighbor_left = NodePath("../novo")
+focus_neighbor_top = NodePath("../novo")
+focus_neighbor_right = NodePath("../novo")
+focus_neighbor_bottom = NodePath("../novo")
+focus_next = NodePath("../novo")
+focus_previous = NodePath("../novo")
+texture_normal = ExtResource("14_5aar0")
+texture_pressed = ExtResource("15_vah7h")
+texture_hover = ExtResource("16_pthk8")
+
+[connection signal="pressed" from="botoes/novo" to="." method="_on_novo_pressed"]
+[connection signal="pressed" from="botoes/sair" to="." method="_on_sair_pressed"]

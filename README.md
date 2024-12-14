@@ -16,7 +16,15 @@ Jogo de sudoku criado pra aprender a usar o godot, algoritmo usado pra criar a m
 
 - destacar nodos com o mesmo valor quando clica em um
 
-- opções pra começar um jogo novo
+- contador de tempo
+
+- deixar o usuário errar e só mostrar em vermelho que tem erro?
+
+- menu que deixa escolher o numero quando clica com o direito
+
+- opção pra tirar as notas automaticamente
+
+- botão pra adicioar automáticamente todas as notas possíveis pra um número
 
 ## Tamanhos
 
@@ -30,3 +38,8 @@ Jogo de sudoku criado pra aprender a usar o godot, algoritmo usado pra criar a m
 - 200z220z252 	fundo jogo
 - 155x175x185
 - 50x60x70	    numeros
+
+## Fonte
+
+Título e Jogo - Feita à mão
+Subtítulo e opções - [VT323](https://fonts.google.com/specimen/VT323)

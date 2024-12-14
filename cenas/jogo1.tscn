@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctfy4f1nyitia"]
+[gd_scene load_steps=8 format=3 uid="uid://ctfy4f1nyitia"]
 
 [ext_resource type="Texture2D" uid="uid://hi8e1g7lbs0s" path="res://sprites/fundo.png" id="1_oscnc"]
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="2_i5dbl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/spriteNodo.gd" id="4_ceqtc"]
 [ext_resource type="Texture2D" uid="uid://cqe7je74ryiun" path="res://sprites/separador.png" id="4_udvno"]
 [ext_resource type="Texture2D" uid="uid://b7jnuyiibfxh" path="res://sprites/vida.png" id="5_mfmiu"]
+[ext_resource type="PackedScene" uid="uid://ctngljvj7uu8l" path="res://cenas/menu.tscn" id="7_m7idt"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,6 +18,7 @@ texture = ExtResource("1_oscnc")
 centered = false
 
 [node name="jogo" type="Node2D" parent="."]
+visible = false
 position = Vector2(24, 96)
 script = ExtResource("2_i5dbl")
 
@@ -360,3 +362,5 @@ rotation = 1.5708
 scale = Vector2(2, 3)
 texture = ExtResource("4_udvno")
 centered = false
+
+[node name="menu" parent="." instance=ExtResource("7_m7idt")]

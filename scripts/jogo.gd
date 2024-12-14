@@ -1,9 +1,12 @@
 extends Node
 
 
+@onready var menu_node: Node = get_node("../menu")
+
 @onready var nodos_path: String = "Linha%s/Node2D%s%s"
 
 @onready var vidas: Array[Node] = [get_node("vidas/1"), get_node("vidas/2"), get_node("vidas/3")]
+
 var linhas: Array[Array]
 var visibilidade: Array[Array]
 var n: int = 0
@@ -12,12 +15,12 @@ var n_vidas = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	comeca_jogo()
+	pass
 
-func comeca_jogo() -> void:
+func comeca_jogo(tamanho: int, faltantes: int) -> void:
 	inicia_arrays()
 	carrega_vidas()
-	inicia_tabuleiro(9, 54)
+	inicia_tabuleiro(tamanho, faltantes)
 	popula_nodos()
 
 func inicia_arrays() -> void:
@@ -191,4 +194,4 @@ func dano() -> void:
 		game_over()
 
 func game_over() -> void:
-	comeca_jogo()
+	menu_node.esconde_jogo()
