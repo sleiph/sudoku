@@ -5,7 +5,7 @@ extends Node
 
 @onready var nodos_path: String = "Linha%s/Node2D%s%s"
 
-@onready var vidas: Array[Node] = [get_node("vidas/1"), get_node("vidas/2"), get_node("vidas/3")]
+@onready var vidas: Array[Node] = [get_node("interface/vidas/1"), get_node("interface/vidas/2"), get_node("interface/vidas/3")]
 
 var linhas: Array[Array]
 var visibilidade: Array[Array]

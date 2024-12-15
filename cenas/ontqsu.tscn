@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctfy4f1nyitia"]
+
+[ext_resource type="Texture2D" uid="uid://hi8e1g7lbs0s" path="res://sprites/fundo.png" id="1_m7xp7"]
+[ext_resource type="PackedScene" uid="uid://si2p10020ukd" path="res://cenas/jogo.tscn" id="2_lg1b6"]
+[ext_resource type="PackedScene" uid="uid://ctngljvj7uu8l" path="res://cenas/menu.tscn" id="3_p2e85"]
+
+[node name="ontqsu" type="Node2D"]
+
+[node name="fundo" type="Sprite2D" parent="."]
+modulate = Color(0.784314, 0.862745, 0.988235, 1)
+z_index = -5
+scale = Vector2(8, 8)
+texture = ExtResource("1_m7xp7")
+centered = false
+
+[node name="jogo" parent="." instance=ExtResource("2_lg1b6")]
+
+[node name="menu" parent="." instance=ExtResource("3_p2e85")]

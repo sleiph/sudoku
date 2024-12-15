@@ -1,0 +1,422 @@
+[gd_scene load_steps=15 format=3 uid="uid://si2p10020ukd"]
+
+[ext_resource type="Script" path="res://scripts/jogo.gd" id="1_5u4bj"]
+[ext_resource type="Texture2D" uid="uid://b7jnuyiibfxh" path="res://sprites/vida.png" id="2_om2ta"]
+[ext_resource type="Script" path="res://scripts/spriteNodo.gd" id="3_i568i"]
+[ext_resource type="Texture2D" uid="uid://dmvi8xxty1sc1" path="res://sprites/1.png" id="4_q27pn"]
+[ext_resource type="PackedScene" uid="uid://db8lc7ksnviwf" path="res://cenas/nodo.tscn" id="4_s1qw0"]
+[ext_resource type="Texture2D" uid="uid://c7q5ijrs3uwg4" path="res://sprites/2.png" id="5_2evrk"]
+[ext_resource type="Texture2D" uid="uid://cqe7je74ryiun" path="res://sprites/separador.png" id="5_fbus5"]
+[ext_resource type="Texture2D" uid="uid://c4yhd23lagms8" path="res://sprites/3.png" id="6_xirt4"]
+[ext_resource type="Texture2D" uid="uid://3ocfr1gu6i6l" path="res://sprites/4.png" id="7_a1bce"]
+[ext_resource type="Texture2D" uid="uid://eke1y43nm7kg" path="res://sprites/5.png" id="8_18twl"]
+[ext_resource type="Texture2D" uid="uid://bpus5ouw3d218" path="res://sprites/6.png" id="9_mu4lw"]
+[ext_resource type="Texture2D" uid="uid://cxoy6hcm42yxi" path="res://sprites/7.png" id="10_rlyc7"]
+[ext_resource type="Texture2D" uid="uid://oqkno1aly52t" path="res://sprites/8.png" id="11_vcet8"]
+[ext_resource type="Texture2D" uid="uid://bhx6q37t8d7ka" path="res://sprites/9.png" id="12_s33dc"]
+
+[node name="jogo" type="Node2D"]
+visible = false
+position = Vector2(24, 96)
+script = ExtResource("1_5u4bj")
+
+[node name="interface" type="Node2D" parent="."]
+position = Vector2(0, -56)
+
+[node name="vidas" type="Node2D" parent="interface"]
+position = Vector2(480, 0)
+
+[node name="3" type="Sprite2D" parent="interface/vidas"]
+texture_filter = 1
+position = Vector2(120, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_om2ta")
+centered = false
+script = ExtResource("3_i568i")
+
+[node name="2" type="Sprite2D" parent="interface/vidas"]
+texture_filter = 1
+position = Vector2(60, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_om2ta")
+centered = false
+script = ExtResource("3_i568i")
+
+[node name="1" type="Sprite2D" parent="interface/vidas"]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_om2ta")
+centered = false
+script = ExtResource("3_i568i")
+
+[node name="numeros" type="Node2D" parent="interface"]
+visible = false
+modulate = Color(0.188235, 0.0941176, 0.188235, 1)
+position = Vector2(0, 21)
+
+[node name="1" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+texture = ExtResource("4_q27pn")
+centered = false
+
+[node name="2" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(24, 0)
+texture = ExtResource("5_2evrk")
+centered = false
+
+[node name="3" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(48, 0)
+texture = ExtResource("6_xirt4")
+centered = false
+
+[node name="4" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(72, 0)
+texture = ExtResource("7_a1bce")
+centered = false
+
+[node name="5" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(96, 0)
+texture = ExtResource("8_18twl")
+centered = false
+
+[node name="6" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(120, 0)
+texture = ExtResource("9_mu4lw")
+centered = false
+
+[node name="7" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(144, 0)
+texture = ExtResource("10_rlyc7")
+centered = false
+
+[node name="8" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(168, 0)
+texture = ExtResource("11_vcet8")
+centered = false
+
+[node name="9" type="Sprite2D" parent="interface/numeros"]
+texture_filter = 1
+position = Vector2(192, 0)
+texture = ExtResource("12_s33dc")
+centered = false
+
+[node name="Linha1" type="Node2D" parent="."]
+
+[node name="Node2D11" parent="Linha1" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D12" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D13" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D14" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D15" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D16" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D17" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D18" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D19" parent="Linha1" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="Linha2" type="Node2D" parent="."]
+position = Vector2(0, 72)
+
+[node name="Node2D21" parent="Linha2" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D22" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D23" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D24" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D25" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D26" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D27" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D28" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D29" parent="Linha2" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="Linha3" type="Node2D" parent="."]
+position = Vector2(0, 144)
+
+[node name="Node2D31" parent="Linha3" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D32" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D33" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D34" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D35" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D36" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D37" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D38" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D39" parent="Linha3" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="separador3" type="Sprite2D" parent="."]
+modulate = Color(0.196078, 0.235294, 0.223529, 1)
+z_index = 1
+position = Vector2(3, 216)
+scale = Vector2(2, 3)
+texture = ExtResource("5_fbus5")
+centered = false
+
+[node name="separador4" type="Sprite2D" parent="."]
+modulate = Color(0.196078, 0.235294, 0.223529, 1)
+z_index = 1
+position = Vector2(219, 3)
+rotation = 1.5708
+scale = Vector2(2, 3)
+texture = ExtResource("5_fbus5")
+centered = false
+
+[node name="Linha4" type="Node2D" parent="."]
+position = Vector2(0, 216)
+
+[node name="Node2D41" parent="Linha4" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D42" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D43" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D44" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D45" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D46" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D47" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D48" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D49" parent="Linha4" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="Linha5" type="Node2D" parent="."]
+position = Vector2(0, 288)
+
+[node name="Node2D51" parent="Linha5" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D52" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D53" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D54" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D55" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D56" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D57" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D58" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D59" parent="Linha5" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="Linha6" type="Node2D" parent="."]
+position = Vector2(0, 360)
+
+[node name="Node2D61" parent="Linha6" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D62" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D63" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D64" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D65" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D66" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D67" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D68" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D69" parent="Linha6" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="separador5" type="Sprite2D" parent="."]
+modulate = Color(0.196078, 0.235294, 0.223529, 1)
+z_index = 1
+position = Vector2(3, 432)
+scale = Vector2(2, 3)
+texture = ExtResource("5_fbus5")
+centered = false
+
+[node name="separador6" type="Sprite2D" parent="."]
+modulate = Color(0.196078, 0.235294, 0.223529, 1)
+z_index = 1
+texture_filter = 1
+position = Vector2(435, 3)
+rotation = 1.5708
+scale = Vector2(2, 3)
+texture = ExtResource("5_fbus5")
+centered = false
+
+[node name="Linha7" type="Node2D" parent="."]
+position = Vector2(0, 432)
+
+[node name="Node2D71" parent="Linha7" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D72" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D73" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D74" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D75" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D76" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D77" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D78" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D79" parent="Linha7" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="Linha8" type="Node2D" parent="."]
+position = Vector2(0, 504)
+
+[node name="Node2D81" parent="Linha8" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D82" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D83" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D84" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D85" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D86" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D87" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D88" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D89" parent="Linha8" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="Linha9" type="Node2D" parent="."]
+position = Vector2(0, 576)
+
+[node name="Node2D91" parent="Linha9" instance=ExtResource("4_s1qw0")]
+
+[node name="Node2D92" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(72, 0)
+
+[node name="Node2D93" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(144, 0)
+
+[node name="Node2D94" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(216, 0)
+
+[node name="Node2D95" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(288, 0)
+
+[node name="Node2D96" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(360, 0)
+
+[node name="Node2D97" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(432, 0)
+
+[node name="Node2D98" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(504, 0)
+
+[node name="Node2D99" parent="Linha9" instance=ExtResource("4_s1qw0")]
+position = Vector2(576, 0)
+
+[node name="separador7" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.196078, 0.235294, 0.223529, 1)
+z_index = 1
+position = Vector2(3, 648)
+scale = Vector2(2, 3)
+texture = ExtResource("5_fbus5")
+centered = false
+
+[node name="separador8" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.196078, 0.235294, 0.223529, 1)
+z_index = 1
+position = Vector2(651, 3)
+rotation = 1.5708
+scale = Vector2(2, 3)
+texture = ExtResource("5_fbus5")
+centered = false
