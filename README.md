@@ -4,6 +4,8 @@ Jogo de sudoku criado pra aprender a usar o godot, algoritmo usado pra criar a m
 
 ## Fazer
 
+- terminar o jogo quando preenche tudo
+
 - cores diferentes pra cada numero
 
 - selecionar mais de um nodo
@@ -25,6 +27,8 @@ Jogo de sudoku criado pra aprender a usar o godot, algoritmo usado pra criar a m
 - opção pra tirar as notas automaticamente
 
 - botão pra adicioar automáticamente todas as notas possíveis pra um número
+
+- mostrar no topo os números que já tão completos
 
 ## Tamanhos
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctngljvj7uu8l"]
+[gd_scene load_steps=31 format=3 uid="uid://ctngljvj7uu8l"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_nho4d"]
 [ext_resource type="Texture2D" uid="uid://cmjymnrwgoiss" path="res://sprites/o.png" id="2_bnjfe"]
@@ -14,8 +14,21 @@
 [ext_resource type="Texture2D" uid="uid://cxp0bcdg321e" path="res://sprites/botao8.png" id="12_io86p"]
 [ext_resource type="Texture2D" uid="uid://cxmvccqaml2hq" path="res://sprites/botao6.png" id="13_gaafs"]
 [ext_resource type="Texture2D" uid="uid://dxgeesik1xsos" path="res://sprites/botao1.png" id="14_5aar0"]
+[ext_resource type="Texture2D" uid="uid://jvyil4nkq11" path="res://sprites/botao9.png" id="15_2nhjd"]
 [ext_resource type="Texture2D" uid="uid://gvdtbhl3n8mc" path="res://sprites/botao4.png" id="15_vah7h"]
+[ext_resource type="Texture2D" uid="uid://df0ov5as74vnp" path="res://sprites/botao10.png" id="16_6u6yl"]
 [ext_resource type="Texture2D" uid="uid://cdclidew578q0" path="res://sprites/botao7.png" id="16_pthk8"]
+[ext_resource type="Texture2D" uid="uid://dtj4ttoi8kfmu" path="res://sprites/botao5.png" id="17_3cnq7"]
+[ext_resource type="Texture2D" uid="uid://df822nxhohold" path="res://sprites/botao12.png" id="17_le8a8"]
+[ext_resource type="Texture2D" uid="uid://cap534i6rt4rv" path="res://sprites/botao11.png" id="18_fiujh"]
+[ext_resource type="Texture2D" uid="uid://bg72d4rxq0wlp" path="res://sprites/botao13.png" id="19_46n7y"]
+[ext_resource type="Texture2D" uid="uid://caxcv7ihwi0r1" path="res://sprites/botao14.png" id="20_5lgk3"]
+[ext_resource type="Texture2D" uid="uid://coburtno7wv6s" path="res://sprites/botao16.png" id="20_nvf46"]
+[ext_resource type="Texture2D" uid="uid://dla43oj6v5g2f" path="res://sprites/botao15.png" id="21_wre0d"]
+[ext_resource type="Texture2D" uid="uid://cq26qu85y6t0k" path="res://sprites/botao17.png" id="22_ol6r0"]
+[ext_resource type="Texture2D" uid="uid://dceudlbrirtrc" path="res://sprites/botao18.png" id="23_5tika"]
+[ext_resource type="Texture2D" uid="uid://vtqbtg2ve3yn" path="res://sprites/botao20.png" id="24_lbn2j"]
+[ext_resource type="Texture2D" uid="uid://bijhv2fst23yc" path="res://sprites/botao19.png" id="25_g1ido"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rgbte"]
 font = ExtResource("9_q4rgk")
@@ -152,10 +165,12 @@ texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -72.0
+offset_left = -36.0
+offset_right = 36.0
 offset_bottom = 24.0
 grow_horizontal = 2
 scale = Vector2(2, 2)
+pivot_offset = Vector2(36, 0)
 tooltip_text = "Novo Jogo"
 focus_neighbor_left = NodePath("../sair")
 focus_neighbor_top = NodePath("../sair")
@@ -167,6 +182,84 @@ texture_normal = ExtResource("10_qbsmg")
 texture_pressed = ExtResource("11_pcdid")
 texture_hover = ExtResource("12_io86p")
 texture_disabled = ExtResource("13_gaafs")
+texture_focused = ExtResource("12_io86p")
+
+[node name="dificuldade" type="Node2D" parent="botoes/novo"]
+visible = false
+z_index = 10
+position = Vector2(36, 0)
+
+[node name="facil" type="TextureButton" parent="botoes/novo/dificuldade"]
+self_modulate = Color(0, 0.282353, 1, 1)
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -120.0
+offset_right = -48.0
+offset_bottom = 24.0
+grow_horizontal = 2
+pivot_offset = Vector2(36, 0)
+tooltip_text = "Novo Jogo"
+focus_neighbor_left = NodePath("../dificil")
+focus_neighbor_top = NodePath("../dificil")
+focus_neighbor_right = NodePath("../medio")
+focus_neighbor_bottom = NodePath("../medio")
+focus_next = NodePath("../medio")
+focus_previous = NodePath("../dificil")
+texture_normal = ExtResource("15_2nhjd")
+texture_pressed = ExtResource("16_6u6yl")
+texture_hover = ExtResource("17_le8a8")
+texture_disabled = ExtResource("18_fiujh")
+texture_focused = ExtResource("17_le8a8")
+
+[node name="medio" type="TextureButton" parent="botoes/novo/dificuldade"]
+self_modulate = Color(0.282353, 0.282353, 1, 1)
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 24.0
+grow_horizontal = 2
+pivot_offset = Vector2(36, 0)
+tooltip_text = "Novo Jogo"
+focus_neighbor_left = NodePath("../facil")
+focus_neighbor_top = NodePath("../facil")
+focus_neighbor_right = NodePath("../dificil")
+focus_neighbor_bottom = NodePath("../dificil")
+focus_next = NodePath("../dificil")
+focus_previous = NodePath("../facil")
+texture_normal = ExtResource("19_46n7y")
+texture_pressed = ExtResource("20_5lgk3")
+texture_hover = ExtResource("20_nvf46")
+texture_disabled = ExtResource("21_wre0d")
+texture_focused = ExtResource("20_nvf46")
+
+[node name="dificil" type="TextureButton" parent="botoes/novo/dificuldade"]
+self_modulate = Color(0.282353, 0, 1, 1)
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 48.0
+offset_right = 120.0
+offset_bottom = 24.0
+grow_horizontal = 2
+pivot_offset = Vector2(36, 0)
+tooltip_text = "Novo Jogo"
+focus_neighbor_left = NodePath("../medio")
+focus_neighbor_top = NodePath("../medio")
+focus_neighbor_right = NodePath("../facil")
+focus_neighbor_bottom = NodePath("../facil")
+focus_next = NodePath("../facil")
+focus_previous = NodePath("../medio")
+texture_normal = ExtResource("22_ol6r0")
+texture_pressed = ExtResource("23_5tika")
+texture_hover = ExtResource("24_lbn2j")
+texture_disabled = ExtResource("25_g1ido")
+texture_focused = ExtResource("24_lbn2j")
 
 [node name="sair" type="TextureButton" parent="botoes"]
 self_modulate = Color(1, 0, 0.282353, 1)
@@ -189,6 +282,11 @@ focus_previous = NodePath("../novo")
 texture_normal = ExtResource("14_5aar0")
 texture_pressed = ExtResource("15_vah7h")
 texture_hover = ExtResource("16_pthk8")
+texture_disabled = ExtResource("17_3cnq7")
+texture_focused = ExtResource("16_pthk8")
 
 [connection signal="pressed" from="botoes/novo" to="." method="_on_novo_pressed"]
+[connection signal="pressed" from="botoes/novo/dificuldade/facil" to="." method="_on_facil_pressed"]
+[connection signal="pressed" from="botoes/novo/dificuldade/medio" to="." method="_on_medio_pressed"]
+[connection signal="pressed" from="botoes/novo/dificuldade/dificil" to="." method="_on_dificil_pressed"]
 [connection signal="pressed" from="botoes/sair" to="." method="_on_sair_pressed"]
