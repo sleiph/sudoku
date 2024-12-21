@@ -208,3 +208,5 @@ func checa_completos() -> void:
 		for j in 9:
 			if visibilidade[i][j] == 1:
 				completos.add_certo(linhas[i][j]-1)
+				if completos.checa_completo(linhas[i][j]-1):
+					completos.set_completo(linhas[i][j]-1)
