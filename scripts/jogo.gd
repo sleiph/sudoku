@@ -1,17 +1,18 @@
 extends Node
 
 
+@onready var vidas: Node = get_node("interface/vidas")
+
+@onready var completos: Node = get_node("interface/completos")
+
 @onready var menu_node: Node = get_node("../menu")
 
 @onready var nodos_path: String = "Linha%s/Node2D%s%s"
-
-@onready var vidas: Array[Node] = [get_node("interface/vidas/1"), get_node("interface/vidas/2"), get_node("interface/vidas/3")]
 
 var linhas: Array[Array]
 var visibilidade: Array[Array]
 var n: int = 0
 var srn: int = 0
-var n_vidas = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,9 +20,10 @@ func _ready() -> void:
 
 func comeca_jogo(tamanho: int, faltantes: int) -> void:
 	inicia_arrays()
-	carrega_vidas()
+	vidas.carrega_vidas()
 	inicia_tabuleiro(tamanho, faltantes)
 	popula_nodos()
+	checa_completos()
 
 func inicia_arrays() -> void:
 	linhas = [
@@ -180,18 +182,29 @@ func get_sequencia(i: int, j: int) -> Array[NodePath]:
 	
 	return [ant_node, prx_node]
 
-func carrega_vidas() -> void:
-	n_vidas = 3
-	for vida in vidas:
-		vida.set_visivel(true)
-
-func dano() -> void:
-	if n_vidas > 1:
-		var vida: Node = vidas[n_vidas-1]
-		vida.set_visivel(false)
-		n_vidas = n_vidas-1
-	else:
-		game_over()
-
 func game_over() -> void:
 	menu_node.esconde_jogo()
+
+func vitoria() -> void:
+	menu_node.esconde_jogo()
+
+func carrega_vidas() -> void:
+	vidas.carrega_vidas()
+
+func dano() -> void:
+	vidas.dano()
+	if vidas.get_vidas() < 1:
+		game_over()
+
+func acerto(i: int) -> void:
+	completos.add_certo(i-1)
+	if completos.checa_completo(i-1):
+		completos.set_completo(i-1)
+		if completos.checa_terminado():
+			vitoria()
+
+func checa_completos() -> void:
+	for i in 9:
+		for j in 9:
+			if visibilidade[i][j] == 1:
+				completos.add_certo(linhas[i][j]-1)

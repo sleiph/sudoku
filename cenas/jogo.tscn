@@ -1,12 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://si2p10020ukd"]
+[gd_scene load_steps=18 format=3 uid="uid://si2p10020ukd"]
 
 [ext_resource type="Script" path="res://scripts/jogo.gd" id="1_5u4bj"]
 [ext_resource type="Texture2D" uid="uid://b7jnuyiibfxh" path="res://sprites/vida.png" id="2_om2ta"]
+[ext_resource type="Script" path="res://scripts/vidas.gd" id="2_pmpav"]
 [ext_resource type="Script" path="res://scripts/spriteNodo.gd" id="3_i568i"]
 [ext_resource type="Texture2D" uid="uid://dmvi8xxty1sc1" path="res://sprites/1.png" id="4_q27pn"]
 [ext_resource type="PackedScene" uid="uid://db8lc7ksnviwf" path="res://cenas/nodo.tscn" id="4_s1qw0"]
 [ext_resource type="Texture2D" uid="uid://c7q5ijrs3uwg4" path="res://sprites/2.png" id="5_2evrk"]
 [ext_resource type="Texture2D" uid="uid://cqe7je74ryiun" path="res://sprites/separador.png" id="5_fbus5"]
+[ext_resource type="Script" path="res://scripts/completos.gd" id="5_lu3s2"]
+[ext_resource type="Texture2D" uid="uid://41rtxnnbovug" path="res://sprites/frameqsefull.png" id="6_ovmuq"]
 [ext_resource type="Texture2D" uid="uid://c4yhd23lagms8" path="res://sprites/3.png" id="6_xirt4"]
 [ext_resource type="Texture2D" uid="uid://3ocfr1gu6i6l" path="res://sprites/4.png" id="7_a1bce"]
 [ext_resource type="Texture2D" uid="uid://eke1y43nm7kg" path="res://sprites/5.png" id="8_18twl"]
@@ -25,6 +28,7 @@ position = Vector2(0, -56)
 
 [node name="vidas" type="Node2D" parent="interface"]
 position = Vector2(480, 0)
+script = ExtResource("2_pmpav")
 
 [node name="3" type="Sprite2D" parent="interface/vidas"]
 texture_filter = 1
@@ -49,61 +53,149 @@ texture = ExtResource("2_om2ta")
 centered = false
 script = ExtResource("3_i568i")
 
-[node name="numeros" type="Node2D" parent="interface"]
-visible = false
+[node name="completos" type="Node2D" parent="interface"]
 modulate = Color(0.188235, 0.0941176, 0.188235, 1)
 position = Vector2(0, 21)
+script = ExtResource("5_lu3s2")
 
-[node name="1" type="Sprite2D" parent="interface/numeros"]
+[node name="1" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/1"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/1"]
 texture_filter = 1
 texture = ExtResource("4_q27pn")
 centered = false
 
-[node name="2" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="2" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(24, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/2"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/2"]
+texture_filter = 1
 texture = ExtResource("5_2evrk")
 centered = false
 
-[node name="3" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="3" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(48, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/3"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/3"]
+texture_filter = 1
 texture = ExtResource("6_xirt4")
 centered = false
 
-[node name="4" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="4" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(72, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/4"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/4"]
+texture_filter = 1
 texture = ExtResource("7_a1bce")
 centered = false
 
-[node name="5" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="5" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(96, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/5"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/5"]
+texture_filter = 1
 texture = ExtResource("8_18twl")
 centered = false
 
-[node name="6" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="6" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(120, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/6"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/6"]
+texture_filter = 1
 texture = ExtResource("9_mu4lw")
 centered = false
 
-[node name="7" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="7" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(144, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/7"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/7"]
+texture_filter = 1
 texture = ExtResource("10_rlyc7")
 centered = false
 
-[node name="8" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="8" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(168, 0)
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/8"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/8"]
+texture_filter = 1
 texture = ExtResource("11_vcet8")
 centered = false
 
-[node name="9" type="Sprite2D" parent="interface/numeros"]
-texture_filter = 1
+[node name="9" type="Node2D" parent="interface/completos"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.490196)
 position = Vector2(192, 0)
+
+[node name="fim" type="Sprite2D" parent="interface/completos/9"]
+position = Vector2(25, 1)
+rotation = 1.5708
+scale = Vector2(0.068, 1)
+texture = ExtResource("5_fbus5")
+centered = false
+
+[node name="fundo" type="Sprite2D" parent="interface/completos/9"]
+texture_filter = 1
+texture = ExtResource("6_ovmuq")
+centered = false
+
+[node name="num" type="Sprite2D" parent="interface/completos/9"]
+texture_filter = 1
 texture = ExtResource("12_s33dc")
 centered = false
 

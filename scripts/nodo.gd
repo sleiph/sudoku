@@ -36,6 +36,7 @@ func input_principal(ev: InputEventKey) -> void:
 	if input > 0:
 		if (checa_input(input)):
 			preenche_valor(input)
+			jogo.acerto(input)
 		else:
 			jogo.dano()
 
