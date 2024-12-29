@@ -28,7 +28,6 @@ Jogo de sudoku criado pra aprender a usar o godot, algoritmo usado pra criar a m
 
 - vidas infinitas no modo fácil
 
-
 ## Fontes
 
 Título e Jogo - Feita à mão
@@ -38,3 +37,4 @@ Subtítulo - [VT323](https://fonts.google.com/specimen/VT323)
 
 - 696x792
 
+![vida 1](/sprites/vida.png)![vida 2](/sprites/vida.png)![vida 3](/sprites/vida.png)
