@@ -11,8 +11,11 @@ extends Node
 
 var linhas: Array[Array]
 var visibilidade: Array[Array]
+var nodos: Array[Node]
+
 var n: int = 0
 var srn: int = 0
+var n_selec: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -138,6 +141,7 @@ func popula_nodos() -> void:
 			var vizinhos: Array[NodePath] = get_vizinhos(i, j)
 			var sequencia: Array[NodePath] = get_sequencia(i, j)
 			nodo.carregar_nodo(linhas[i][j], visibilidade[i][j], vizinhos, sequencia, self)
+			nodos.push_back(nodo)
 
 func get_vizinhos(i: int, j: int) -> Array[NodePath]:
 	var ver: int = i+1
@@ -210,3 +214,8 @@ func checa_completos() -> void:
 				completos.add_certo(linhas[i][j]-1)
 				if completos.checa_completo(linhas[i][j]-1):
 					completos.set_completo(linhas[i][j]-1)
+
+func tipo_selec(s: int) -> void:
+	n_selec = s
+	for nodo in nodos:
+		nodo.destaca(s)

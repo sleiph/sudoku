@@ -48,6 +48,7 @@ offset_bottom = 24.0
 scale = Vector2(3, 3)
 button_mask = 3
 texture_normal = ExtResource("16_y7713")
+texture_pressed = ExtResource("16_y7713")
 texture_hover = ExtResource("15_0i1ls")
 texture_disabled = ExtResource("15_fp06x")
 texture_focused = ExtResource("17_mao23")

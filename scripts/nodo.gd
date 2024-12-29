@@ -6,14 +6,23 @@ var jogo: Node = null
 
 var pressed: bool = false
 var editavel: bool = true
+var visivel: bool = false
 
 var ctrl_pressed: bool = false
+
+var tex_normal: String = "res://sprites/fundonodob.png"
+var tex_disab: String = "res://sprites/fundonodod.png"
+var tex_press: String = "res://sprites/fundonodoa.png"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
 func _on_estado_focus_entered() -> void:
+	if visivel:
+		jogo.tipo_selec(n)
+	else:
+		jogo.tipo_selec(0)
 	pressed = true
 
 func _on_estado_focus_exited() -> void:
@@ -76,6 +85,7 @@ func carregar_nodo(numero: int, v: int, vizinhos: Array[NodePath], sequencia: Ar
 	n = numero
 	jogo = nodo_jogo
 	editavel = !v
+	visivel = v
 	$notas.remove_notas()
 	$inicial.preenche(numero, v)
 	$variavel.preenche(numero, false)
@@ -87,6 +97,7 @@ func preenche_valor(n: int):
 	if n > 0:
 		editavel = false
 		$notas.remove_notas()
+		visivel = true
 		$variavel.set_visivel(true)
 
 func preenche_vizinhos(vizinhos: Array[NodePath]) -> void:
@@ -104,3 +115,14 @@ func get_estado() -> NodePath:
 
 func checa_input(input: int) -> bool:
 	return input == n
+
+func destaca(s: int) -> void:
+	if (s == n):
+		if visivel:
+			var tex: Resource = load(tex_press)
+			$estado.set_texture_normal(tex)
+			$estado.DRAW_NORMAL
+			return
+	var tex: Resource = load(tex_normal)
+	$estado.set_texture_normal(tex)
+	$estado.DRAW_NORMAL
