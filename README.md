@@ -28,6 +28,8 @@ Jogo de sudoku criado pra aprender a usar o godot, algoritmo usado pra criar a m
 
 - vidas infinitas no modo fácil
 
+- se já tiver o número na linha/coluna/quadrante, não perder vidas se tentar preencher, só alertar o usuário q já existe
+
 ## Fontes
 
 Título e Jogo - Feita à mão
